@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var networkManager=NetworkManager()
+    
     var body: some View {
         NavigationView{
-            List(posts) { item in
+            List(networkManager.posts) { item in
                 Text(item.id)
                     .padding()
             }.navigationTitle("Hacker News")
