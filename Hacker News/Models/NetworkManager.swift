@@ -4,7 +4,7 @@ import Foundation
 class NetworkManager: ObservableObject {
     @Published var posts = [Post]()
     func fetchData(){
-        if let url = URL(string: "http://hn.algolia.com/api/v1/search?tags=front_page"){
+        if let url = URL(string: "https://dev-shop.cermepos.com/api/product/50"){
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url){
                 (data,response,error) in
@@ -14,7 +14,8 @@ class NetworkManager: ObservableObject {
                         do {
                             let results=try decoder.decode(Results.self, from: safeData)
                             DispatchQueue.main.async{
-                                self.posts=results.hits
+                                self.posts=results.data.content
+                                
                             }
                         } catch  {
                             print(error)
@@ -28,15 +29,17 @@ class NetworkManager: ObservableObject {
 }
 
 struct Results: Decodable{
-    let hits: [Post]
+    var data: data
+}
+
+struct data: Decodable{
+    var content: [Post]
 }
 
 struct Post: Decodable, Identifiable {
-    var id: String {
-        return objectID
-    }
-    let objectID: String
-    let points: Int
-    let title: String
-    let url: String
+
+    var id: Int
+    let shopId: Int
+    let barcodeNumber: String
+    let name: String
 }
