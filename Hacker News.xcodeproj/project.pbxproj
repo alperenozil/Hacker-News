@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		324911B125B2141400BD9520 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324911B025B2141400BD9520 /* DataModels.swift */; };
+		3267858A25A9894E002EA7A9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267858925A9894E002EA7A9 /* NetworkManager.swift */; };
 		32D331BE25A72A990034DB03 /* Hacker_NewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D331BD25A72A990034DB03 /* Hacker_NewsApp.swift */; };
 		32D331C025A72A990034DB03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D331BF25A72A990034DB03 /* ContentView.swift */; };
 		32D331C225A72A9A0034DB03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32D331C125A72A9A0034DB03 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		324911B025B2141400BD9520 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
+		3267858925A9894E002EA7A9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		32D331BA25A72A990034DB03 /* Hacker News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hacker News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32D331BD25A72A990034DB03 /* Hacker_NewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hacker_NewsApp.swift; sourceTree = "<group>"; };
 		32D331BF25A72A990034DB03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +37,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3267858825A98931002EA7A9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3267858925A9894E002EA7A9 /* NetworkManager.swift */,
+				324911B025B2141400BD9520 /* DataModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		32D331B125A72A990034DB03 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +67,7 @@
 			children = (
 				32D331BD25A72A990034DB03 /* Hacker_NewsApp.swift */,
 				32D331BF25A72A990034DB03 /* ContentView.swift */,
+				3267858825A98931002EA7A9 /* Models */,
 				32D331C125A72A9A0034DB03 /* Assets.xcassets */,
 				32D331C625A72A9A0034DB03 /* Info.plist */,
 				32D331C325A72A9A0034DB03 /* Preview Content */,
@@ -138,6 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3267858A25A9894E002EA7A9 /* NetworkManager.swift in Sources */,
+				324911B125B2141400BD9520 /* DataModels.swift in Sources */,
 				32D331C025A72A990034DB03 /* ContentView.swift in Sources */,
 				32D331BE25A72A990034DB03 /* Hacker_NewsApp.swift in Sources */,
 			);
